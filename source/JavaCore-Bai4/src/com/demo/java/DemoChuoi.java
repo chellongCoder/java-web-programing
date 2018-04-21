@@ -18,6 +18,7 @@ public class DemoChuoi {
         String str = "Anhnnnnnnn";
         String str1 = "      Binh       ";
         System.out.println(str1.trim());
+        str1.replace("n", "m");
 //        System.out.println(str.lastIndexOf("n"));
 //        System.out.println("Hung".compareTo("Hung"));
         
