@@ -20,8 +20,6 @@ public class Main {
     public static void main(String[] args) {
         
         Student s1 = new Student();
-//        s1.age = 12;
-        
         String info = s1.printInfo();
         System.out.println(info);
         System.out.println("------");
