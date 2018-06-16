@@ -5,8 +5,6 @@
  */
 package com.java.demo;
 
-import java.util.Scanner;
-
 /**
  *
  * @author pc

@@ -13,8 +13,21 @@ import java.util.Scanner;
  */
 public class Calculate {
  
-    public double inputNumber() {
-        return 0.0;
+    public double inputNumber(String mes) {
+        Scanner input = new Scanner(System.in);
+        double num = 0;
+        boolean inputNumber = false;
+        do {                
+            try {
+                System.out.print(mes);
+                num = Double.parseDouble(input.nextLine());
+                inputNumber = false;
+            } catch (NumberFormatException e) {
+                System.out.println("Phai nhap so.");
+                inputNumber = true;
+            }    
+        } while (inputNumber);
+        return num;
     }
     
     public void run() {
@@ -23,30 +36,8 @@ public class Calculate {
         boolean inputA = false;
         boolean inputB = false;
         do {
-            double a = 0;
-            do {                
-                try {
-                    System.out.print("a = ");
-                    a = Double.parseDouble(input.nextLine());
-                    inputA = false;
-                } catch (NumberFormatException e) {
-                    System.out.println("Phai nhap so.");
-                    inputA = true;
-                }    
-            } while (inputA);
-            
-            double b = 0;
-            do {                
-                try {
-                    System.out.print("b = ");
-                    b = Double.parseDouble(input.nextLine());
-                    inputB = false;
-                } catch (NumberFormatException e) {
-                    System.out.println("Phai nhap so.");
-                    inputB = true;
-                }    
-            } while (inputB);
-            
+            double a = inputNumber("a = ");
+            double b = inputNumber("b = ");
             
             System.out.print("(+,-,*,/) = ");
             String opt = input.nextLine();
